@@ -1,0 +1,347 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.logo {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    padding: 1em; /* Add some padding */
+}
+
+.logo-image {
+    width: 50px; /* Set a fixed width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between image and text */
+}
+
+.logo-text {
+    font-size: 24px; /* Set font size for portfolio text */
+    color: #333; /* Text color */
+}
+
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #fdfd96;
+    padding: 1em;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    color: black; /* Set menu item color to black */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Adjust font size as needed */
+    padding: 0 10px; /* Add padding for spacing */
+}
+
+.menu a:hover {
+    color: #333; /* Optional hover color */
+}
+
+header .menu-toggle {
+    display: none; /* Hide on desktop */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+    header .menu {
+        display: none; /* Hide the menu initially on mobile */
+        flex-direction: column;
+        gap: 0.5em;
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    header .menu.active {
+        display: flex; /* Show menu when active class is added */
+    }
+
+    header .menu-toggle {
+        display: block; /* Show toggle button on mobile */
+    }
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 3em 1em;
+    background-color: #fffbea;
+}
+
+.hero-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#hero h1 {
+    color: #f4a400;
+    margin-top: 0.5em;
+}
+
+/* CSS for styling the social links */
+.social-icons {
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 10px; /* Add space between icons */
+}
+
+.social-icons a {
+    color: black; /* Set icon color to black */
+    text-decoration: none;
+    font-size: 24px; /* Adjust icon size as needed */
+}
+
+.social-icons a:hover {
+    color: #333; /* Slight color change on hover, optional */
+}
+
+#about, #skills, #experience, #youtube, #blog, #contact {
+    padding: 2em 1em;
+}
+
+/* Experience Section */
+#experience {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 2em;
+    margin: 1em 0;
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 1em;
+}
+
+.section-title {
+    font-size: 1.25em;
+    margin-top: 1.5em;
+    color: #f4a400;
+}
+
+#experience ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#experience li {
+    background-color: #e9ecef;
+    margin: 0.5em 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+#skills li {
+    background-color: #fdfd96;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+/* YouTube Section */
+#youtube .videos {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#youtube iframe {
+    width: 600px;
+    height: 400px;
+}
+
+/* Blog Section
+#blog article {
+    background-color: #fff9cc;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 8px;
+} */
+#blog {
+    padding: 2em 1em; /* Padding for the blog section */
+    background-color: #fff9cc; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    margin: 1em 0; /* Space above and below the section */
+}
+
+#blog h2 {
+    text-align: center; /* Center the section title */
+    color: #007bff; /* Change title color */
+}
+
+article {
+    background-color: #fff; /* White background for articles */
+    padding: 1em; /* Padding inside articles */
+    margin-bottom: 1.5em; /* Space between articles */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+#blog {
+    padding: 2em 1em; /* Padding for the blog section */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    margin: 1em 0; /* Space above and below the section */
+}
+
+#blog h2 {
+    text-align: center; /* Center the section title */
+    color: #007bff; /* Change title color */
+}
+
+article {
+    background-color: #fff; /* White background for articles */
+    padding: 1em; /* Padding inside articles */
+    margin-bottom: 1.5em; /* Space between articles */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.blog-image {
+    width: 100%; /* Make image responsive */
+    max-width: 400px; /* Set maximum width for desktop view */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for the image */
+    margin: 1em 0; /* Space around the image */
+    display: block; /* Ensure the image behaves like a block element */
+    margin-left: auto; /* Center the image */
+    margin-right: auto; /* Center the image */
+}
+
+article h3 {
+    color: #f4a400; /* Color for blog titles */
+    margin-bottom: 0.5em; /* Space below the title */
+}
+
+article p {
+    color: #333; /* Text color for summaries */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .blog-image {
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
+}
+
+#pdfs {
+    padding: 2em 1em; /* Padding for the PDF section */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    margin: 1em 0; /* Space above and below the section */
+}
+
+#pdfs h2 {
+    text-align: center; /* Center the section title */
+    color: #007bff; /* Change title color */
+}
+
+.pdf-container {
+    display: flex; /* Enable flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping to the next row */
+    gap: 1em; /* Space between items */
+    justify-content: center; /* Center items horizontally */
+}
+
+.pdf-item {
+    background-color: #fff; /* White background for items */
+    padding: 1em; /* Padding inside items */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    text-align: center; /* Center align text */
+    flex: 1 1 calc(25% - 1em); /* Allow four items per row on larger screens */
+    max-width: 250px; /* Maximum width for PDF items */
+}
+
+.pdf-thumbnail {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for the image */
+}
+
+.pdf-link {
+    display: inline-block; /* Ensure link is treated as a block */
+    margin-top: 0.5em; /* Space above the link */
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.pdf-link:hover {
+    text-decoration: underline; /* Underline on hover for emphasis */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pdf-item {
+        flex: 1 1 calc(50% - 1em); /* Allow two items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .pdf-item {
+        flex: 1 1 100%; /* Allow one item per row on small screens */
+    }
+}
+
+/* Footer Section */
+footer {
+    background-color: #f4a400;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav a {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    #experience {
+        padding: 1.5em 0.5em;
+    }
+
+    #skills ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #youtube .videos {
+        flex-direction: column;
+    }
+
+    #youtube iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
